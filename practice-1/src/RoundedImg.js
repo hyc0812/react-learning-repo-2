@@ -1,6 +1,6 @@
 import React from "react"
 // import PropTypes from "react"
-import PropTypes from "react"
+import PropTypes from "prop-types"
 
 
 /**
@@ -28,6 +28,7 @@ RoundedImg.propTypes = {
     src: PropTypes.string.isRequired,
     borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
+
 
 RoundedImg.defaultProps = {
     borderRadius: "50%"
