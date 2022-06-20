@@ -1,25 +1,22 @@
 
 import './App.css';
-
 import React from "react"
-
 import Header from "./Header"
 import UserContext from './userContext';
 
-class App extends React.Component {
-  static contextType = UserContext;
+function App (){
+  return (
+    <div>
+        <Header />
+        <main>
+          <UserContext.Consumer>
+            {username => (
+                <p className="main">No new notifications, { username }! 🎉</p>
+            )}
+          </UserContext.Consumer>
 
-    render() {
-      const username = this.context;
-      return (
-          <div>
-              <Header />
-              <main>
-                  <p className="main">No new notifications, { username }! 🎉</p>
-              </main>
-          </div>
-      )
-    }
+        </main>
+    </div>
+  )
 }
-
 export default App
