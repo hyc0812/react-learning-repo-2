@@ -12,12 +12,20 @@ function App () {
   function decrement() {
     setCount(prevCount => prevCount - 1)
   }
+  function double () {
+    setCount(prevCount => prevCount * 2)
+  }
+  function half () {
+    setCount(prevCount => (prevCount / 2))
+  }
 
   return (
     <div>
       <h1>{ count }</h1>
-      <button onClick={ increment }> Change! </button>
-      <button onClick={ decrement }> Change! </button>
+      <button onClick={ increment }> Increase </button>
+      <button onClick={ decrement }> Decrease </button>
+      <button onClick={ double }> Double</button>
+      <button onClick={ half }> Half</button>
     </div>
   )
 }
