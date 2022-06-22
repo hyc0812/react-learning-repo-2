@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import UserContext from "./userContext"
+import { UserContextProvider } from "./userContext"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserContext.Provider value={"bob123"}>
+    <UserContextProvider>
       <App />
-    </UserContext.Provider>
+    </UserContextProvider>
   </React.StrictMode>
 );
