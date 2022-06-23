@@ -18,10 +18,10 @@ function App () {
       })
     }
   function handleSubmit(event) {
-
+    event.preventDefault();
+    setContactData(prevContacts => [...prevContacts, inputData])
   }
-
-  console.log(inputData)
+  const contacts = contactData.map(contact => <h2>{ contact.firstName } { contact.lastName }</h2>)
 
   return (
     <div>
@@ -41,6 +41,8 @@ function App () {
             />
           <br />
           <button> Add Contact </button>
+          <br />
+          { contacts }
         </form>
 
       </div>
@@ -66,11 +68,3 @@ export default App
   // function half () {
   //   setCount(prevCount => (prevCount / 2))
   // }
-
-        {/* <div>
-        <h1>{ count }</h1>
-        <button onClick={ increment }> Increase </button>
-        <button onClick={ decrement }> Decrease </button>
-        <button onClick={ double }> Double</button>
-        <button onClick={ half }> Half</button>
-      </div> */}
