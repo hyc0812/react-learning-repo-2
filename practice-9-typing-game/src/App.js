@@ -5,27 +5,21 @@ import React, { useState } from 'react';
 
 function App() {
 
-  const [inputData, setInputData] = useState({textArea:""})
+  const [text, setText] = useState("")
 
   function handleChange(event) {
-    const {name, value} = event.target;
-    setInputData(prevInputData => {
-      return {
-        ...prevInputData,
-        [name]: value
-      }
-    })
-
+    const { value } = event.target;
+    setText(value)
   }
-  console.log(inputData)
+  console.log(text)
 
   return (
     <div>
       <h1>How fast do you type? </h1>
       <textarea 
-        name="textArea"
-        value={inputData.textArea}
-        onChange={ handleChange }/>
+        value={text}
+        onChange={ handleChange }
+      />
       <h4>Time remaining: ???</h4>
       <button> START </button>
       <h1> Word Count: ???</h1>
