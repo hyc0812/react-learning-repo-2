@@ -2,6 +2,8 @@
 import './App.css';
 
 import React, {useState, useEffect} from "react"
+import randomcolor from "randomcolor"
+
 
 function App() {
     const [count, setCount] = useState(0)
@@ -14,6 +16,10 @@ function App() {
     function decrement() {
         setCount(prevCount => prevCount - 1)
     }
+
+    useEffect(() => {
+      
+    })
     
     return (
         <div>
