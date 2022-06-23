@@ -21,7 +21,7 @@ function App () {
     event.preventDefault();
     setContactData(prevContacts => [...prevContacts, inputData])
   }
-  const contacts = contactData.map(contact => <h2>{ contact.firstName } { contact.lastName }</h2>)
+  const contacts = contactData.map(contact => <h2 key={ contact.firstName + contact.lastName }>{ contact.firstName } { contact.lastName }</h2>)
 
   return (
     <div>
