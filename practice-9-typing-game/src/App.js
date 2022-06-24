@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react"
 
 
 function App() {
-    const STARTING_TIME = 10
+    const STARTING_TIME = 20
     const [text, setText] = useState("")
     const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
     const [isTimeRunning, setIsTimeRunning] = useState(false)
@@ -24,6 +24,7 @@ function App() {
         setIsTimeRunning(true)
         setTimeRemaining(STARTING_TIME)
         setText("")
+        setwordCount(0)
     }
 
     function endGame() {
@@ -31,7 +32,7 @@ function App() {
         const numWords = calculateWordCount(text)
         setwordCount(numWords)
     }
-    
+
     useEffect(() => {
         if(isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
@@ -46,7 +47,7 @@ function App() {
         <div>
             <h1>How fast do you type?</h1>
             <textarea
-                onChange={handleChange}
+                onChange={ handleChange }
                 value={text}
                 disabled={ !isTimeRunning }
             />
