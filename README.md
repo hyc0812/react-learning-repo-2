@@ -47,7 +47,7 @@ This is the 2ed repo for learning React and Js.
 
 <img src="https://github.com/hyc0812/react-learning-repo-2/blob/master/screenshot/practice_8_hooks-2.png" width=600>
 
-- Practice - 
+- Practice - 9
 > Typing game Demo
 
-<img src="https://github.com/hyc0812/react-learning-repo-2/blob/master/screenshot/practice-9-typing-game" width=600>
+<img src="https://github.com/hyc0812/react-learning-repo-2/blob/master/screenshot/practice-9-typing-game.png" width=600>
