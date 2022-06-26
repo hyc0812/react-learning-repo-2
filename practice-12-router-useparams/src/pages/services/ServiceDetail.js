@@ -1,6 +1,6 @@
 import React from "react"
 import {useParams} from "react-router-dom"
-import servicesData from "./servicesData"
+import servicesData from "./ServicesData"
 
 function ServiceDetail(props) {
     const {serviceId} = useParams()
