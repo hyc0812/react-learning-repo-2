@@ -15,15 +15,15 @@ function App() {
             <Header />
             
             <Routes>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route exact path="/services" >
-                    <ServicesList />
-                </Route>
-                <Route path="/services/:serviceId" >
-                    <ServiceDetail />
-                </Route>
+                <Route exact path="/"
+                    element={<Home />}
+                />
+                <Route exact path="/services" 
+                   element={ <ServicesList />}
+                />
+                <Route path="/services/:serviceId" 
+                    element={<ServiceDetail />}
+                />
             </Routes>
         </div>
     )

@@ -1,4 +1,4 @@
-export default [
+const servicesData = [
     {
         "name": "Lawn Mowing",
         "price": 30,
@@ -24,3 +24,5 @@ export default [
         "description": "Keep your irrigation system top-notch."
     }
 ]
+
+export default servicesData
